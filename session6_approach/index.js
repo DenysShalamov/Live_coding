@@ -27,5 +27,4 @@ function getPrimes(num) {
 }
 
 //  test
-
 getPrimes(15);
