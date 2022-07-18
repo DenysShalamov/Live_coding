@@ -22,13 +22,12 @@
 // iterate arr and ckeck equal
 
 function compareObjects(obj1, obj2) {
-  const obj1Len = Object.keys(obj1).length;
-  const obj2Len = Object.keys(obj2).length;
-
-  if (obj1Len !== obj2Len) {
+  const keys1 = Object.keys(obj1);
+  if (keys1.length !== Object.keys(obj2).length) {
     return false;
   }
-  return Object.keys({ ...obj1, ...obj2 }).every(key => obj1[key] === obj2[key]);
+
+  return !keys1.some(key => obj1[key] !== obj2[key]);
 }
 
 // examples
